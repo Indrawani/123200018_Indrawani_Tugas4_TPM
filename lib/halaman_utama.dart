@@ -5,6 +5,8 @@ import 'package:tugas4_tpm/login_page.dart';
 import 'package:tugas4_tpm/situs_rekomendasi.dart';
 import 'package:tugas4_tpm/stopwatch.dart';
 
+import 'halaman_favorite.dart';
+
 class HalamanUtama extends StatefulWidget {
   const HalamanUtama({Key? key}) : super(key: key);
 
@@ -100,6 +102,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                   buttonDatarAnggota(context),
                   buttonStopwatch(context),
                   buttonSitusRekomendasi(context),
+                  buttonFavorite(context),
                 ]),
           ),
         ]),
@@ -160,6 +163,26 @@ Widget buttonSitusRekomendasi(BuildContext context) {
               }));
         },
         child: const Text('Get Start Situs Rekomendasi'),
+        style: ElevatedButton.styleFrom(
+          minimumSize: const Size.fromHeight(40),
+        ),
+      ),
+    ),
+  );
+}
+
+Widget buttonFavorite(BuildContext context) {
+  return Container(
+    padding: const EdgeInsets.only(bottom: 0, left: 60, right: 60, top: 20),
+    child: Center(
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+                return  MenuFavorite();
+              }));
+        },
+        child: const Text('Get Start Favorite'),
         style: ElevatedButton.styleFrom(
           minimumSize: const Size.fromHeight(40),
         ),

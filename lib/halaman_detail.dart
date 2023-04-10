@@ -36,7 +36,24 @@ class _HalamanDetailState extends State<HalamanDetail> {
                     toggle ? Icons.favorite : Icons.favorite_border,
                     color: Colors.red,
                   ),
-                  onPressed: toggleFavorite,
+                  onPressed: (){
+                    setState(() {
+                      if(detailHotel.favorite == false){
+                        detailHotel.favorite = true;
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text('Favorite ditambahkan'),
+                              backgroundColor: Colors.green),
+                        );
+                      }else{
+                        detailHotel.favorite = false;
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text('Favorite dihapus'), backgroundColor: Colors.red),
+                        );
+                      }
+                    });
+                  },
                 ),
               ),
             ],

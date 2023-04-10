@@ -7,6 +7,7 @@ class DataHotel {
   List<String> imageUrl;
   List<String> facility;
   List<String> iconFacility;
+  bool favorite;
 
   DataHotel({
     required this.name,
@@ -16,8 +17,10 @@ class DataHotel {
     required this.websiteLink,
     required this.imageUrl,
     required this.facility,
-    required this.iconFacility
+    required this.iconFacility,
+    required this.favorite
   });
+
 }
 
 var hotelList = [
@@ -44,7 +47,9 @@ var hotelList = [
         '0xe39d',
         '0xe4dc',
         '0xe533',
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "Eastparc Hotel Yogyakarta",
       location: "Yogyakarta",
@@ -70,7 +75,9 @@ var hotelList = [
         '0xe4dc',
         '0xe533',
         '0xe580',
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "Hotel ibis Pontianak City Center",
       location: "Pontianak",
@@ -94,7 +101,9 @@ var hotelList = [
         '0xe39d',
         '0xe5d8',
         '0xe533',
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "Amnaya Resort Kuta",
       location: "Bali",
@@ -120,7 +129,9 @@ var hotelList = [
         '0xe4dc',
         '0xe6f1',
         '0xe580'
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "Hotel Santika Premiere Malang",
       location: "Malang",
@@ -146,7 +157,9 @@ var hotelList = [
         '0xe4dc',
         '0xe580',
         'Icons.coffee',
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "Jambuluwuk Malioboro Yogyakarta Hotel",
       location: "Yogyakarta",
@@ -170,7 +183,9 @@ var hotelList = [
         '0xe39d',
         '0xe580',
         '0xe533',
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "GAIA Cosmo Hotel",
       location: "Yogyakarta",
@@ -196,7 +211,9 @@ var hotelList = [
         '0xe4dc',
         '0xe580',
         '0xe533'
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "Lafayette Boutique Hotel",
       location: "Yogyakarta",
@@ -222,7 +239,9 @@ var hotelList = [
         '0xe4dc',
         '0xe580',
         '0xe533',
-      ]),
+      ],
+    favorite: false,
+  ),
   DataHotel(
       name: "Indoluxe Hotel Jogjakarta",
       location: "Yogyakarta",
@@ -248,5 +267,7 @@ var hotelList = [
         '0xe4dc',
         '0xe580',
         '0xe533',
-      ]),
+      ],
+    favorite: false,
+  ),
 ];
